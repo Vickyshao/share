@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>注册</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/app.css" rel="stylesheet" />
+		<style type="text/css">
+			
+			.mui-content {
+				position: relative;
+				min-height: 100%;				
+			}
+			
+			body {
+				background: url(img/bg.png) no-repeat;
+				background-size: 100% 100%;
+			}
+			.bgc_gradient{background: url(img/bg1.png) no-repeat;
+				background-size: 100% 100%;}
+			.app_pa_bottom {
+				bottom: 10px;
+			}
+			.top img{width: 90%;margin-left:6%;}
+			.share_btn img{width: 100%;}
+			.app_cgrey{color: #967d18;}
+			.app_pt45p{padding-top: 40%;}
+			.mui-input-row{border-top:3px solid #f5ba6a;background: #fff;margin-top:15px;border-radius: 10px;}
+			#app-vericode{width: 100%;padding-left: 15px;}
+			.rigester_color{color:#eb6332;}
+			#app-message{width: 40%;margin-top: -46px;height: 45px;line-height:35px;display: inline-block;border-radius: 10px;background:#eb6332;}   
+			.mui-input-group .mui-input-row{height: 45px;}
+				.app_input_group {
+				    padding: 0 25px;
+				}
+			.app_c9{background:#999 !important;}
+		</style>
+	</head>
+
+	<body>
+		
+		<div class="mui-content app_mui_content0 reg-page app_pt10">
+			<div class="bgc_gradient">
+				<div class="top">
+					<img src="img/top_wenzi.png" alt="" />
+				</div>
+				<div class="app_mt10 app_w100p text-align-center rigester_color app_16">国资背景（中国商业网点中心100%控股）</div>
+				<div class="app_w100p app_pb25">
+					<div class="mui-input-group app_input_group app_mt10 reg-page" id="app-regForm">
+						<div class="mui-input-row app_c2 " id="app-phoneDiv">
+							<input id="app-phoneNo" type="tel" class="mui-input-clear" placeholder="输入您的手机号" valid='{"required":true,"msg":"手机号码不能为空","tipsbox":"#app_tips_reg","subvalid":[{"mobilePhone":true, "msg":"请输入正确格式的手机号码"}]}' maxlength="11" oninput="GHutils.checkInput(this,0)" />
+						</div>
+						<div class="mui-input-row app_c2" style="width: 50%;">
+							<input id="app-vericode" type="tel" class="app_vcode_input" placeholder="输入验证码" valid='{"required":true,"msg":"验证码不能为空","tipsbox":"#app_tips_reg","subvalid":[{"positiveInteger":true,"msg":"验证码输入错误","minLength":6}]}' maxlength="6" oninput="GHutils.checkInput(this,2)" />
+						</div>
+						<a href="javascript:;" id="app-message" class="app_cf mui-btn app_btn_line reg-page app_fr app_f16">获取验证码</a>	
+						<div class="mui-input-row app_c2 reg-eye">
+							<input id="app-userPwd" type="password" class="mui-input-password" value="" placeholder="设置登录密码(6~16位数字、字母)" valid='{"required":true,"tipsbox":"#app_tips_reg","msg":"密码不能为空","subvalid":[{"between":[6,16],"msg":"密码长度在6-16位之间"}]}' maxlength="16" oninput="GHutils.checkInput(this,1)" />
+						</div>
+						<div class="mui-input-row app_c2 reg-eye" style="background: #fff;">
+							<input type="tel" value="" placeholder="邀请码(非必填)" id="invite_code" valid='{"required":false,"tipsbox":"#app_tips_reg"}' maxlength="10" oninput="GHutils.checkInput(this,2)"/>
+						</div>
+					</div>
+					<div class="app_cred app_pl40 app_tips_txt" id="app_tips_reg">&nbsp;</div>
+					<div class="mui-text-center app_pl10 reg-tip">
+						<label>
+							<!--<span class="app_icon app_icon_checked app_f14"></span>--><input type="checkbox"  checked="checked" id="app_aggrement"/> 我已阅读并同意
+						</label>
+						<a class="rigester_color" app_txt_id="3" id="app_person" data-title='沪深理财平台服务协议' data-typeId="PLATFORM">《沪深理财平台服务协议》</a>
+					</div>
+					
+					<div class="app_ml25 app_mr25 app_mt15 app_f08x">
+						<div id="app-stepOneNext" type="button" class="share_btn">
+							<img src="img/share_btn.png" alt="" />
+						</div>
+					</div>
+					<!--<div class="app_w100p text-align-center app_mt25 ">已有账号？<a href="">立即登录</a></div>-->
+				</div>
+			</div>
+			<div class="four">
+				<img src="img/four.png" width="100%" alt="" />
+			</div>
+			<div class="text-align-center app_cgrey app_mt10 app_f08x app_mb10">
+				<img src="img/footer.png" width="80%" />
+			</div>
+		</div>
+		<script src="js/zepto.min.js"></script>
+		<script src="js/share/component.js"></script>
+		<script src="js/share/register.js"></script>
+	</body>
+
+</html>
